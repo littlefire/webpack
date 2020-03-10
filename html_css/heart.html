@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    .content{
+        margin: 0 auto;
+        box-sizing: border-box;
+        width: 400px;
+        height: 600px;
+        -border: 1px solid red;
+        position: relative;
+    }
+
+    .content::before,.content::after{
+        content: "";
+        width: 250px;
+        height: 500px;
+        background-color: aqua;
+        margin: 0 auto;
+        left:75px;
+        position: absolute;
+        
+    }
+    .content::before{
+        transform: rotate(135deg);
+        border-radius: 0px 0px 125px 125px;
+        left:-103px;
+    }
+    .content::after{
+        transform: rotate(45deg);
+        border-radius: 125px 125px 0px 0px;
+    }
+    
+</style>
+<body>
+    <div class="content">
+    </div>
+</body>
+</html>
